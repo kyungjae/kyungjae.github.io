@@ -11,6 +11,13 @@ layout: default
   <span class="post-date">
     <time>{{ page.date | date_to_string }}</time>
   </span>
+
+
+  {{ content }}
+
+
+  <!-- Share -->
+  {% if page.share != false %}
   <div class="post-tag">
     <ul>
       {% for tag in page.tags %}
@@ -23,12 +30,7 @@ layout: default
       {% endfor %}
     </ul>
   </div>
-
-  {{ content }}
-
-
-  <!-- Share -->
-  {% if page.share != false %}
+  
   <div class="post-share">
     <hr>
     {% include share.html %}
