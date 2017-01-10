@@ -40,9 +40,9 @@ body {
   padding: 2%;
 
   &-title {
-    font-weight: 300;
+    font-weight: 100;
     a {
-      color: $base-color;
+      color: black;
 
       &:hover,
       &:focus {
@@ -72,7 +72,6 @@ body {
       }
 
       + a {
-        margin-top: 1rem;
 	margin-left: 1rem;
       }
     }
@@ -87,7 +86,7 @@ body {
 	text-transform: uppercase;
 
 	a {
-		color: $base-color;
+		color: #5a89c8;
 
 		&:hover,
 		&:focus {
