@@ -3,7 +3,7 @@ layout: default
 ---
 <header>
   <h1 class="header-small">
-    <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}<span>&#39;s blog</span></a>
+    <a href="{{ site.url }}{{ site.baseurl }}"><span> < </span>{{ site.name }}<span>&#39;s blog</span></a>
 
   </h1>
 </header>
@@ -12,12 +12,13 @@ layout: default
   <span class="post-date">
     <time>{{ page.date | date_to_string }}</time>
   </span>
+<P></P>
 
 
   {{ content }}
 
 
-  <!-- Share -->
+  <!-- Tag -->
   {% if page.share != false %}
   <div class="post-tag">
     <ul>
@@ -32,6 +33,7 @@ layout: default
     </ul>
   </div>
   
+  <!-- Share -->
   <div class="post-share">
     <hr>
     {% include share.html %}

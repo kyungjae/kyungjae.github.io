@@ -28,7 +28,7 @@ body {
   margin-right: auto;
 
   @media (min-width: 38rem){
-    padding: 5rem 1rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -40,9 +40,9 @@ body {
   padding: 2%;
 
   &-title {
-    font-weight: 100;
+    font-weight: 600;
     a {
-      color: black;
+      color: #5a89c8;
 
       &:hover,
       &:focus {
@@ -50,13 +50,11 @@ body {
       }
     }
 
-    span {
-      color: lighten($base-color, 60);
-    }
 
   }
 
   &-nav {
+    margin-bottom: 1em;
     a {
       color: lighten($base-color, 50);
       font-weight: 300;
@@ -68,7 +66,7 @@ body {
       &:hover,
       &:focus {
         color: $base-color;
-        text-decoration: none;
+        text-decoration: underline;
       }
 
       + a {
@@ -80,10 +78,11 @@ body {
 
 .header-small {
 	text-align: left;
-	margin-bottom: 1rem;
-	font-size: .75rem;
-	font-weight: 100;
-	text-transform: lowercase;
+	margin-top: 1rem;
+  margin-bottom: 1rem;
+	font-size: 1rem;
+	font-weight: 500;
+	text-transform: uppercase;
 
 	a {
 		color: #5a89c8;
@@ -116,7 +115,7 @@ body {
   }
 
   &-date {
-    margin-bottom: .5rem;
+    margin-bottom: 3rem;
     color: $base-lighten-color;
     font-size: .75rem;
     text-transform: uppercase;
