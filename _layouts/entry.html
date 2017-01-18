@@ -4,6 +4,23 @@ layout: default
 
 {% assign base_path = '../../..' %}
 
+
+
+
+<!-- Post Header -->
+<header class="intro-header post-header" style="background-image: url('{{ site.baseurl }}/{page.header-img %}{{ page.header-img }})">
+    <div class="header-container">
+        <div class="post-heading">
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}
+            <h2 class="subheading">{{ page.description }}</h2>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+
+<!-- 기존 코드 -->
 <div class="post-author-info">
     <h1 class="post-title">{{page.title}}</h1>
     <span class="post-date">{{ page.date | date: "%Y/ %m/ %d" }}</span>

@@ -120,13 +120,25 @@ a.footnote {
 }
 .header-item {
   max-width: 700px;
+  height: 80px;
   margin-left: auto;
   margin-right: auto;
+
 }
 .top-logo-wrap {
-  padding-top: 26px;
+/*  padding-top: 26px; */
   float:left;
+  width: 150px;
+  height: 80px;
+  display: inline-block;
 }
+
+.blog-title:hover {
+  -webkit-transition: 0.2s ease-out all;
+  color: $grey-text-color;
+  }
+
+
 /*
 .top-logo img {
   width: 60px;
@@ -138,10 +150,15 @@ a.footnote {
 */
 
 .blog-title {
+  padding-top: 26px;
   font-size: $blog-font-size-title;
   font-weight: 700;
   color: $text-color;
-}
+  display: inline-block;
+  }
+
+
+
 .atom-img {
   display: inline-block;
   width: 14px;
@@ -157,7 +174,7 @@ a.footnote {
 
 /* menu list btn */
 .nav {
-  display: block;
+  display: inline-block;
   float: right;
 }
 #toggle,
@@ -240,13 +257,7 @@ a.footnote {
   margin: 0;
   text-align: left;
 }
-.posts .post-author-info .portrait {
-  width: 68px;
-  vertical-align: middle;
-  border-radius: 50%;
-  float: right;
-  margin-left: 56px;
-}
+
 .posts li {
   border-bottom: 1px solid $divider-color;
   padding: 8% 0;
@@ -311,6 +322,41 @@ a.footnote {
   }
 }
 
+
+
+/* blog post top img */
+.intro-header {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #333;
+  position: relative;
+  z-index: 1;
+}
+.intro-header.post-header {
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.intro-header.post-header .header-container {
+  width: 700px;
+  margin: 0 auto;
+  color: $post-top-text-color
+
+}
+
+.post-date {
+  margin-bottom: 10px;
+  color: $grey-text-color;
+}
+
+@media only screen and (max-width: 767px) {
+  .intro-header.post-header .header-container {
+    width: 90%;
+  }
+}
+
 /* blog post */
 figcaption {
   text-align: center;
@@ -355,9 +401,12 @@ figcaption {
 .post-title-words{
   color: $text-color;
 }
+
 .post-description {
   margin: 18px 100px 6px 0;
   padding: 0;
+  color: $grey-6;
+
 }
 .post-footer {
   margin-top: 20px;

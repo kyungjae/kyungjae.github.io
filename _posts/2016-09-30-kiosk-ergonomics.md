@@ -3,6 +3,7 @@ layout: entry
 title: 키오스크형 터치 UI에서 더 나은 스크롤 방향은 무엇일까?
 author: 김재석
 author-email: jc@spoqa.com
+header-img: "images/2016-09-30/wrist-status-terms"
 publish: true
 ---
 
