@@ -258,8 +258,9 @@ a.footnote {
   text-align: left;
 }
 
+
 .posts li {
-  border-bottom: 1px solid $divider-color;
+/*  border-bottom: 4px solid $divider-color; */
   padding: 8% 0;
 }
 .list-type-none {
@@ -324,39 +325,6 @@ a.footnote {
 
 
 
-/* blog post top img */
-.intro-header {
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-color: #333;
-  position: relative;
-  z-index: 1;
-}
-.intro-header.post-header {
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-.intro-header.post-header .header-container {
-  width: 700px;
-  margin: 0 auto;
-  color: $post-top-text-color
-
-}
-
-.post-date {
-  margin-bottom: 10px;
-  color: $grey-text-color;
-}
-
-@media only screen and (max-width: 767px) {
-  .intro-header.post-header .header-container {
-    width: 90%;
-  }
-}
-
 /* blog post */
 figcaption {
   text-align: center;
@@ -378,7 +346,7 @@ figcaption {
 }
 .post-author-info {
   margin-bottom: 12%;
-  text-align: center;
+  text-align: left;
 }
 .post-date {
   margin-bottom: 10px;
@@ -398,9 +366,24 @@ figcaption {
 
   line-height: 1.4;
 }
-.post-title-words{
+.post-title-words {
   color: $text-color;
 }
+
+.post-type {
+  margin: 18px 100px 6px 0;
+  padding: 0;
+  color: $grey-6; 
+}
+
+/* 포스트 리스트에서 글자 hover 효과 */
+
+
+.post-title-words:hover {
+  -webkit-transition: 0.2s ease-out all;
+  color: $grey-text-color;
+}
+
 
 .post-description {
   margin: 18px 100px 6px 0;
@@ -447,18 +430,7 @@ figcaption {
 .about ul a {
   padding-right: 2px;
 }
-.author {
-  overflow: auto;
-  padding: 30px 0;
-  border-bottom: 1px solid $divider-color;
-}
-.author-title {
-  margin-top: 100px;
-}
-.author-info {
-  margin-top: 3px;
-  margin-left: 20%;
-}
+
 .member-info {
 }
 .sns a {
@@ -545,70 +517,6 @@ figcaption {
 }
 
 
-/* hiring banner 
-
-.hiring-banner {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 5%;
-  height: 430px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(/images/hiring-imagex1.jpg);
-  background-color: #fff;
-  background-position: left bottom;
-  -webkit-transition: 0.2s ease-out all;
-
-}
-.lt-ie9 .hiring-banner {
-  background-image: url(/images/hiring-imagex1.jpg) no-repeat;
-  background-position: left bottom;
-}
-.hiring-fixedwidth-wrap {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-}
-.hiring-content {
-  top: 80px;
-  right: 11px;
-  display: block;
-  position: absolute;
- text-shadow: 0px 0px 20px rgba(248,248,246, 0.6),
-              0px 0px 30px rgba(248,248,246, 0.6);
-}
-.hiring-title {
-  margin-bottom: 20px;
-  font-size: 48px;
-  font-weight: 100;
-  line-height: 1.1em;
-  color: $text-color;
-  -webkit-transition: 0.2s ease-out all;
-}
-.hiring-subtitle {
-  color: $text-color;
-  font-weight: normal;
-  -webkit-transition: 0.2s ease-out all;
-  line-height: 1.5em;
-}
-.btn-job {
-  margin-top: 24px;
-  padding: 17px 15%;
-  display: inline-block;
-  border: 1px solid $primary-color;
-  border-radius: 2px;
-  color: $hightlight-text-color;
-  background-color: rgba(255, 255, 255, 0.7);
-  -webkit-transition: 0.2s ease-out all;
-}
-.btn-job:hover {
-  color: $hightlight-text-color;
-  background-color: transparent;
-  border: 1px solid $primary-color;
-  background-color: rgba(76, 128, 241, 0.1);
-}
-
-*/
 
 /* responsive */
 @media only screen and (max-width: 650px) {
@@ -698,6 +606,7 @@ figcaption {
     margin-right: 0;
     font-size: 36px;
   }
+
   .pagination .pages li {
     display: none;
   }

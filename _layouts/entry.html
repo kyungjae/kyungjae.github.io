@@ -5,21 +5,6 @@ layout: default
 {% assign base_path = '../../..' %}
 
 
-
-
-<!-- Post Header -->
-<header class="intro-header post-header" style="background-image: url('{{ site.baseurl }}/{page.header-img %}{{ page.header-img }})">
-    <div class="header-container">
-        <div class="post-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.description %}
-            <h2 class="subheading">{{ page.description }}</h2>
-            {% endif %}
-        </div>
-    </div>
-</header>
-
-
 <!-- 기존 코드 -->
 <div class="post-author-info">
     <h1 class="post-title">{{page.title}}</h1>
@@ -45,27 +30,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=207542736008055";
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=111093312318312";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 });
 </script>
-<style>
-.hiring-banner {
-  height: 320px;
-  background-position-y: 80%;
-}
-.hiring-subtitle
-{
-  display: none;
-}
-.btn-job{
-  margin-top: 4px;
-}
-@media only screen and (max-width: 360px) {
-  .hiring-banner {
-    height: 220px;
-  }
-}
-}
-</style>
+
