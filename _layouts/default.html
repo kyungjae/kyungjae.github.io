@@ -19,19 +19,8 @@
   {% else %}
     <meta property="og:image" content="{{ site.home_url }}{{ site.representing_image }}">
   {% endif %}
+
   <script>
-    window.WebFontConfig = {
-        custom: {
-            families: ['spoqahansans:100,400,700'],
-            urls: ['/css/spoqahansans.css']
-        },
-        timeout: 60000
-    };
-    (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
-        s.parentNode.insertBefore(wf, s);
-    })(document);
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -51,10 +40,13 @@
 </style>
 </head>
 <body>
+<script src="{{ base_path }}/js/dynamicMenu.js"></script>
+<script src="{{ base_path }}/js/dynamicMenu.min.js"></script>
+
+
     <div class="header">
       <div class="header-item">
         <div class="top-logo-wrap">
-<!--          <a class="top-logo" href="{{ base_path }}/"><img src="{{ base_path }}/images/logo.png" alt="Kyungjae's logo"></a> -->
           <a class="blog-title" href="{{ base_path }}/">Ha Kyungjae</a>
         </div>
         <div class="nav">
@@ -69,7 +61,6 @@
               {% if page.url != '/about.html' and page.url != '/jobs.html' %}
               selected
               {% endif %} menu-blog" href="{{ base_path }}/index.html">Blog</a></li>
-<!--            <li><a class="menu-github" href="https://github.com/kyungjae">GitHub</a></li> -->
             <li><a class="
               {% if page.url == '/jobs.html' %}
               selected
@@ -78,10 +69,13 @@
         </div>
       </div>
 
-    <div class="content">
+
+
+
+<div class="content">
       {{ content }}
     </div>
-    <div class="push">
+<div class="push">
     </div>
     <div class="footer">
       <div id="info">

@@ -26,6 +26,11 @@
   padding: 1% 5%;
 }
 
+.content{
+  margin-top: 0rem;
+}
+
+
 
 /* text style */
 .post {
@@ -115,7 +120,7 @@ a.footnote {
 .header {
   height: 80px;
   padding: 0 5%;
-  background-color: #fff;
+  background-color: $grey-1;
   border-bottom: 1px solid $divider-color;
 }
 .header-item {
@@ -253,19 +258,41 @@ a.footnote {
 
 /* blog list */
 
-.posts .post-author-info { /*추후에는 blog list 의 post-author-info와 blog의 post-author-info를 분리하는게 좋을 듯.*/
+.list-type-none {
+  list-style: none;
+}
+
+.post-list .list-item-info {
   margin: 0;
   text-align: left;
 }
 
+.post-list li {
+  border-bottom: 2px solid $divider-color;
+  padding: 6% 0;
+}
 
-.posts li {
-/*  border-bottom: 4px solid $divider-color; */
-  padding: 8% 0;
+.post-list li:hover {
+  -webkit-transition: 0.2s ease-out all;
+  border-bottom: 2px solid $red-0;
 }
-.list-type-none {
-  list-style: none;
+
+.info-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: $text-color;
 }
+
+/* 포스트 리스트에서 글자 hover 효과 
+.info-title:hover {
+  -webkit-transition: 0.2s ease-out all;
+  color: $green-d2;
+}
+ */
+
 
 /* pagination */
 
@@ -339,13 +366,13 @@ figcaption {
   }
 
   img {
-    max-width: 90%;
+    max-width: 100%;
     display: block;
-    padding: 20px;
-  }
+    margin: 0 auto;
+      }
 }
 .post-author-info {
-  margin-bottom: 12%;
+  margin-bottom: 10%;
   text-align: left;
 }
 .post-date {
@@ -353,42 +380,19 @@ figcaption {
   color: $grey-text-color;
 }
 .post-title {
-  font-size: 44px;
+  font-size: 36px;
   font-weight: 700;
 
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-bottom: 20px;
   color: $text-color;
-}
-.posts .post-title {
-  margin: 0 0 5px;
-  font-size: $blog-font-size-lg;
-
-  line-height: 1.4;
-}
-.post-title-words {
-  color: $text-color;
-}
-
-.post-type {
-  margin: 18px 100px 6px 0;
-  padding: 0;
-  color: $grey-6; 
-}
-
-/* 포스트 리스트에서 글자 hover 효과 */
-
-
-.post-title-words:hover {
-  -webkit-transition: 0.2s ease-out all;
-  color: $grey-text-color;
 }
 
 
 .post-description {
-  margin: 18px 100px 6px 0;
+  margin: 18px 100px 18px 0;
   padding: 0;
-  color: $grey-6;
+  color: $grey-7;
 
 }
 .post-footer {
@@ -577,27 +581,6 @@ figcaption {
     padding: 15px 0;
     width: 100%;
   }
-  .hiring-banner {
-    height: 380px;
-    cursor: pointer;
-  }
-  .hiring-content {
-    top: 60px;
-    right:0;
-    left:0;
-    margin: 0;
-    text-align:center;
-  }
-  .hiring-title {
-    font-size: $blog-font-size-lg;
-  }
-  .hiring-subtitle br{
-    display: none;
-  }
-  .btn-job {
-    width: 70%;
-  }
-  
 
   .posts li {
     padding: 15% 0;
