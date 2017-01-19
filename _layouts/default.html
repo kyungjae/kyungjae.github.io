@@ -40,18 +40,17 @@
 </style>
 </head>
 <body>
-<script src="{{ base_path }}/js/dynamicMenu.js"></script>
-<script src="{{ base_path }}/js/dynamicMenu.min.js"></script>
-
-
+  <div class="wrapper">
     <div class="header">
       <div class="header-item">
         <div class="top-logo-wrap">
-          <a class="blog-title" href="{{ base_path }}/">Ha Kyungjae</a>
+          <a class="blog-title" href="{{ base_path }}/">HKJ</a>
         </div>
         <div class="nav">
+<!--    
           <input type="checkbox" id="toggle">
           <label for="toggle" class="toggle" onclick></label>
+--> 
           <ul class="menu">
             <li><a class="
               {% if page.url == '/about.html' %}
@@ -61,20 +60,30 @@
               {% if page.url != '/about.html' and page.url != '/jobs.html' %}
               selected
               {% endif %} menu-blog" href="{{ base_path }}/index.html">Blog</a></li>
-            <li><a class="
+<!--            <li><a class="
               {% if page.url == '/jobs.html' %}
               selected
               {% endif %} menu-job" href="/jobs.html">Work</a></li>
           </ul>
+-->          
         </div>
       </div>
+    </div>
+</div>
 
 
+
+
+<div class ="content-outer" > 
 
 
 <div class="content">
       {{ content }}
     </div>
+    
+</div>
+
+
 <div class="push">
     </div>
     <div class="footer">
