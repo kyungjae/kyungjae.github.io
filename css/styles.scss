@@ -113,14 +113,15 @@ a.footnote {
 }
 
 .wrapper {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
 
+/*
 .content-outer {
   margin-top: 4rem; }
+*/
 
 /* 네비게이션 2줄되면 상단 높이 변경
   @media only screen and (min-width: 624px) {
@@ -236,7 +237,7 @@ a.footnote {
   display: inline-block;
 
   a {
-    padding: 26px 20px 15px;
+    padding: 26px 20px 28px;
     color: $grey-text-color;
     display: block;
     font-size: 14px;
@@ -251,10 +252,12 @@ a.footnote {
       -webkit-transition: 0.2s ease-out all;
       font-weight: 700;
       color: $text-color;
+      border-bottom: 2px solid $text-color;
+
     }
     &:focus,
     &:hover {
-      -webkit-transition: 0.2s ease-out all;
+      border-bottom: 2px solid $text-color;
       color: $text-color;
     }
   }
@@ -264,12 +267,7 @@ a.footnote {
   padding-right: 15px;
   vertical-align: middle;
 }
-.dev-blog {
-  font-weight: 100;
-  font-size: $blog-font-size-lg;
-  color: white;
-  display: inline-block;
-}
+
 
 /* post-authot-info (post-info로 수정하는게 의미상 맞을 듯) */
 
@@ -287,13 +285,17 @@ a.footnote {
 }
 
 .post-list li {
-  border-bottom: 2px solid $divider-color;
+  border-bottom: 1px solid $divider-color;
   padding: 6% 0;
 }
 
-.post-list li:hover {
-  -webkit-transition: 0.2s ease-out all;
-  border-bottom: 2px solid $red-0;
+
+.post-list li {
+    &:focus,
+    &:hover {
+      -webkit-transition: 0.2s ease-out all;
+      border-bottom: 1px solid $mainblue-d1;
+    }
 }
 
 .info-title {
@@ -305,12 +307,12 @@ a.footnote {
   color: $text-color;
 }
 
-/* 포스트 리스트에서 글자 hover 효과 
-.info-title:hover {
-  -webkit-transition: 0.2s ease-out all;
-  color: $green-d2;
+
+.post-list li:hover .info-title {
+  -webkit-transition: 0.1s ease-out all;
+  color: $mainblue-d1;      
 }
- */
+
 
 
 /* pagination */
