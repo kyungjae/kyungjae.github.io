@@ -1,13 +1,9 @@
 <!doctype html>
-<!--[if lt ie 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if ie 7]>         <html class="lt-ie9 lt-ie8 ie7"> <![endif]-->
-<!--[if ie 8]>         <html class="lt-ie9 ie8"> <![endif]-->
-<!--[if gt ie 8]><!-->
-<html class=""><!--<![endif]-->
+<html class="">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Kyungjae's Blog{% if page.title %} | {{ page.title }}{% endif %}</title>
+  <title>Ha Kyungjae{% if page.title %} | {{ page.title }}{% endif %}</title>
   <link rel="canonical" href="{{ site.home_url }}{{ page.url }}">
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:url" content="{{ site.home_url }}{{ page.url }}">
@@ -44,46 +40,25 @@
     <div class="header">
       <div class="header-item">
         <div class="top-logo-wrap">
-          <a class="blog-title" href="{{ base_path }}/">HKJ</a>
+          <a class="blog-title" href="{{ base_path }}/">H K J</a>
         </div>
         <div class="nav">
-<!--    
-          <input type="checkbox" id="toggle">
-          <label for="toggle" class="toggle" onclick></label>
---> 
           <ul class="menu">
             <li><a class="
               {% if page.url == '/about.html' %}
               selected
-              {% endif %} menu-about" href="{{ base_path }}/about.html">About</a></li>
+              {% endif %} menu-about" href="{{ base_path }}/about.html">ABOUT</a></li>
             <li><a class="
               {% if page.url != '/about.html' and page.url != '/jobs.html' %}
               selected
-              {% endif %} menu-blog" href="{{ base_path }}/index.html">Blog</a></li>
-<!--            <li><a class="
-              {% if page.url == '/jobs.html' %}
-              selected
-              {% endif %} menu-job" href="/jobs.html">Work</a></li>
-          </ul>
--->          
+              {% endif %} menu-blog" href="{{ base_path }}/index.html">BLOG</a></li>       
         </div>
       </div>
     </div>
 </div>
-
-
-
-
-<div class ="content-outer" > 
-
-
 <div class="content">
       {{ content }}
-    </div>
-    
-</div>
-
-
+</div>   
 <div class="push">
     </div>
     <div class="footer">
@@ -106,21 +81,5 @@
       })
     });
   </script>
-  <!-- Responsive layout polyfill for IE8 and lower -->
-  <!--[if lte IE 8]>
-  <script>
-    var config = {
-        mobileResponsiveBreakpoint: 650
-    };
-    $(window).on('resize', function(){
-        if ($(window).width() <= config.mobileResponsiveBreakpoint) {
-           !$(document.body).hasClass('res-mobile')) {
-            $(document.body).addClass('res-mobile');
-        } else {
-            $(document.body).removeClass('res-mobile');
-        }
-    }).trigger('resize');
-  </script>
-  <![endif]-->
 </body>
 </html>
