@@ -14,9 +14,12 @@
   font-family: "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial, "Malgun Gothic", Dotum, sans-serif;
 }
 
+
 .hljs {
   background: $grey-highlight-color;
 }
+
+
 .content,
 .footer {
   width: 90%;
@@ -281,7 +284,7 @@ a.footnote {
 
 .post-list .list-item-info {
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .post-list li {
@@ -411,7 +414,7 @@ figcaption {
 
 
 .post-description {
-  margin: 18px 100px 18px 0;
+  margin: 18px 50px 18px 50px;
   padding: 0;
   color: $grey-7;
 
