@@ -2,7 +2,7 @@
 layout: entry
 title: 키오스크형 터치 UI에서 더 나은 스크롤 방향은 무엇일까?
 header-img: "images/hiring-imagex1.jpg"
-image: /images/2016-09-26/card sorting analysis_04.png
+list-image: "images/2016-09-26/card sorting analysis_04.png"
 publish: true
 ---
 
