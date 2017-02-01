@@ -25,7 +25,6 @@
 }
 
 
-
 /* text style */
 .post {
   p a,
@@ -151,8 +150,6 @@ a.footnote {
   display: inline-block;
   }
 
-
-
 .atom-img {
   display: inline-block;
   width: 14px;
@@ -228,10 +225,9 @@ a.footnote {
 }
 
 .post-list li {
-  border-bottom: 1px solid $divider-color;
-  padding: 6% 0;
+  border-bottom: 1px solid #fff;
+  padding: 4% 0;
 }
-
 
 .post-list li {
     &:focus,
@@ -245,8 +241,7 @@ a.footnote {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.4;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin: 0px 0px 20px 0px;
   color: $text-color;
 }
 
@@ -254,6 +249,12 @@ a.footnote {
 .post-list li:hover .info-title {
   -webkit-transition: 0.1s ease-out all;
   color: $mainblue-d1;      
+}
+
+.post-list-img {
+  width: 100%;
+  vertical-align: middle;
+  margin-bottom: 20px;
 }
 
 
@@ -339,10 +340,6 @@ figcaption {
   margin: 10% 5%;
   text-align: center;
 }
-.post-date {
-  margin-bottom: 10px;
-  color: $grey-text-color;
-}
 .post-title {
   font-size: 36px;
   font-weight: 700;
@@ -351,13 +348,14 @@ figcaption {
   margin-bottom: 20px;
   color: $text-color;
 }
-
-
 .post-description {
   margin: 14px 50px 14px 0px;
   padding: 0;
   color: $grey-7;
-
+}
+.post-date {
+  margin-bottom: 10px;
+  color: $grey-text-color;
 }
 .post-footer {
   margin-top: 20px;
