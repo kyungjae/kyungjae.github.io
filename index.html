@@ -16,13 +16,15 @@ header-img: "images/blog-bg.png"
       {% for post in paginator.posts %}
         {% if post.publish != false %}
         <a href="{{ post.url }}">
+
         <li class="list-item">
           <div class="list-item-info">
               <img class="post-list-img" src="{{ site.baseurl }}/{{ post.post-list-img }}" />
-              <h2 class="info-title">{{ post.title }}
-              </h2>
-              <p class="post-description">{{ post.description }}</p>
-              <span class="post-date">{{ post.date | date: "%Y/ %m/ %d" }}</span>
+              <div class="post-list-title">{{ post.title }}
+              </div>
+              <div class="post-list-description">{{ post.description }} 
+              </div>
+              <div class="post-list-date">{{ post.date | date: "%Y/ %m/ %d" }}</div>
           </div>
         </li>
         </a>

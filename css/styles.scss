@@ -19,9 +19,7 @@
 .footer {
   width: 90%;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3% 5%;
+  margin: 50px auto;
 }
 
 
@@ -127,7 +125,7 @@ a.footnote {
   background-image: url(../images/blog-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 2000px auto;
+  background-size: cover;
   background-color: #173057;
   padding: 0 5%;
 }
@@ -165,6 +163,12 @@ a.footnote {
   text-align: center;
 }
 
+// 포스트 상단 타이틀 숨김//
+.post-heading {
+  visibility: hidden;
+}
+
+
 .post-header-title {
   font-size: 2.3em;
   font-weight: 700;
@@ -172,21 +176,20 @@ a.footnote {
   color: #fff;
   text-rendering: optimizeLegibility;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
 }
 .post-header-description {
   font-size: 20px;
   font-weight: 400;
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 .post-header-date {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
 }
 
@@ -285,7 +288,6 @@ a.footnote {
 }
 
 
-
 /* blog list */
 
 .list-type-none {
@@ -297,24 +299,23 @@ a.footnote {
   text-align: left;
 }
 .post-list li {
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 5px rgba(0,0,0,0), 0 1px 1px rgba(0,0,0,0);
   transition: all 0.2s cubic-bezier(.25,.8,.25,1);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   background-color: #fff;
+  border-bottom: 1px solid $divider-color;
 }
+/*
 .post-list li:hover {
   transition: all 0.2s cubic-bezier(.25,.8,.25,1);
-  box-shadow: 0 3px 3px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1);
 }
-.post-list li:hover .info-title {
-  -webkit-transition: 0.1s ease-out all;
+*/
+
+.post-list li:hover .post-list-title {
+  -webkit-transition: 0.3s ease-out all;
   color: $mainblue-d1;
 }
-
-
-
-/*
 .post-list li {
     &:focus,
     &:hover {
@@ -322,22 +323,32 @@ a.footnote {
       border-bottom: 1px solid $mainblue-d1;
     }
 }
-*/
 
-.info-title {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.4;
-  margin: 0px 20px 0px 20px;
-  color: $text-color;
-}
 .post-list-img {
   width: 100%;
   vertical-align: middle;
+  border-radius: 4px;
   margin-bottom: 20px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
 }
+.post-list-title {
+  -webkit-transition: 0.3s ease-out all;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: $text-color;
+}
+.post-list-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: $grey-7;
+}
+.post-list-date {
+  font-size: 14px;
+  margin-bottom: 40px;
+  color: $grey-5;
+}
+
 
 
 
@@ -419,25 +430,22 @@ figcaption {
     margin: 0 auto;
       }
 }
-.post-author-info {
-  margin: 10% 5%;
-  text-align: center;
+.post-info {
+  margin: 10% 0 10% 0;
+  text-align: left;
 }
 .post-title {
-  font-size: 36px;
+  font-size: 44px;
   font-weight: 700;
-
   margin-top: 60px;
   margin-bottom: 20px;
   color: $text-color;
 }
-.post-description {
-  margin: 0px 20px 10px 20px;
-  color: $grey-7;
-}
 .post-date {
-  margin-bottom: 10px;
-  color: $grey-text-color;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 100px;
+  color: $grey-5;
 }
 .post-footer {
   margin-top: 20px;

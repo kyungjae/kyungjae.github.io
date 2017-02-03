@@ -6,12 +6,12 @@ layout: default
 
 
 <!-- 기존 코드 -->
+<div class="post-info">
+<h1 class="post-title">{{page.title}}</h1>
+<span class="post-date">{{ page.date | date: "%Y년 %m월 %d일" }}</span>
+</div>
+<div class="post">{{ content }}</div>
 
-{% if page.publish == false %}
-  <div class="post">Coming soon</div>
-{% else %}
-  <div class="post">{{ content }}</div>
-{% endif %}
 
 <div class="post-footer">
   <div class="back-btn"><a href="/">목록으로 돌아가기</a></div>
