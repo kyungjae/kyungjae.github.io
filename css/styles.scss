@@ -21,7 +21,7 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1% 5%;
+  padding: 3% 5%;
 }
 
 
@@ -108,47 +108,122 @@ a.footnote {
     font-size: $blog-font-size-sm;
   }
 }
-
+/*
 .wrapper {
   top: 0;
   left: 0;
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #333;
+  position: relative;
+  z-index: 1;
 }
+*/
 
 // header
+
+.header {
+  background-image: url(../images/blog-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 2000px auto;
+  background-color: #173057;
+  padding: 0 5%;
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    background-size: 1400px auto;
+  }
+}
+.header .header-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 0;
+  display: inline-block;
+}
+@media only screen and (max-width: 767px) {
+  .header .header-container {
+    width: 100%;
+  }
+}
+.list-header-title {
+  font-family: 'Merriweather', serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.list-header-description {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+
+.post-header-title {
+  font-size: 2.3em;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.post-header-description {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+.post-header-date {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*
 .header {
   height: 80px;
   padding: 0 5%;
   background-color: $grey-1;
   border-bottom: 1px solid $divider-color;
 }
+*/
 .header-item {
   max-width: 700px;
-  height: 80px;
   margin-left: auto;
   margin-right: auto;
-
 }
 .top-logo-wrap {
   float:left;
   width: 120px;
-  height: 80px;
+  height: 60px;
   display: inline-block;
 }
-
+.blog-title {
+  font-family: 'Merriweather', serif;
+  padding-top: 26px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  }
 .blog-title:hover {
   -webkit-transition: 0.2s ease-out all;
-  color: $grey-text-color;
+  color: #fff;
   }
 
-
-.blog-title {
-  padding-top: 26px;
-  font-size: 20px;
-  font-weight: 700;
-  color: $text-color;
-  display: inline-block;
-  }
 
 .atom-img {
   display: inline-block;
@@ -167,8 +242,6 @@ a.footnote {
 .nav {
   display: inline-block;
   float: right;
-  
-
 }
 
 // Menu
@@ -180,28 +253,28 @@ a.footnote {
   display: inline-block;
 
   a {
-    padding: 26px 20px 27px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    padding: 26px 20px 10px;
     color: $grey-text-color;
     display: block;
     font-size: 14px;
     color: $grey-5;
-    @media only screen and (max-width: 580px) {
-      font-size: 14px;
-    }
-
+    text-rendering: optimizeLegibility;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 
     &:active,
     &.selected {
-      -webkit-transition: 0.2s ease-out all;
+      -webkit-transition: 0.1s ease-out all;
       font-weight: 700;
-      color: $text-color;
-      border-bottom: 3px solid $text-color;
-
+      color: #fff;
+      border-bottom: 2px solid #fff;
     }
     &:focus,
     &:hover {
-      border-bottom: 3px solid $text-color;
-      color: $text-color;
+      -webkit-transition: 0.1s ease-out all;
+      border-bottom: 2px solid #fff;
+      color: #fff;
     }
   }
 }
@@ -223,12 +296,25 @@ a.footnote {
   margin: 0;
   text-align: left;
 }
-
 .post-list li {
-  border-bottom: 1px solid #fff;
-  padding: 4% 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.1);
+  transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+.post-list li:hover {
+  transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+}
+.post-list li:hover .info-title {
+  -webkit-transition: 0.1s ease-out all;
+  color: $mainblue-d1;
 }
 
+
+
+/*
 .post-list li {
     &:focus,
     &:hover {
@@ -236,26 +322,23 @@ a.footnote {
       border-bottom: 1px solid $mainblue-d1;
     }
 }
+*/
 
 .info-title {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.4;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 20px 0px 20px;
   color: $text-color;
 }
-
-
-.post-list li:hover .info-title {
-  -webkit-transition: 0.1s ease-out all;
-  color: $mainblue-d1;      
-}
-
 .post-list-img {
   width: 100%;
   vertical-align: middle;
   margin-bottom: 20px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
+
 
 
 
@@ -349,8 +432,7 @@ figcaption {
   color: $text-color;
 }
 .post-description {
-  margin: 14px 50px 14px 0px;
-  padding: 0;
+  margin: 0px 20px 10px 20px;
   color: $grey-7;
 }
 .post-date {
@@ -511,10 +593,6 @@ figcaption {
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
   }
-  p {
-    font-size: 16px;
-  }
-
 
 
   .posts li {
@@ -570,57 +648,6 @@ figcaption {
   }
   .pagination .next {
     float: right;
-  }
-}
-
-// job-table
-
-.job-table {
-  margin-top: 20px;
-}
-
-.job-table > thead {
-  border-top: 1px solid $table-border-color;
-}
-
-.job-table > thead > tr,
-.job-table > tbody > tr {
-  border-bottom: 1px solid $table-border-color;
-  background-color: #fff;
-}
-
-.job-table > thead > tr > th {
-  font-weight: 700;
-  text-align: center;
-  vertical-align: middle;
-  border-color: $table-border-color;
-  padding: 16px;
-  color: $grey-text-color;
-}
-
-.job-table > tbody > tr >td {
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  border-color: $table-border-color;
-  padding: 16px 0;
-
-  > a {
-    display: inline-block;
-    width: 100%;
-  }
-}
-
-.job-table > tbody > tr:hover {
-  background-color: white;
-
-  >td {
-    -webkit-transition: 0.2s ease-out all;
-    background-color: $grey-bg-color;
-
-    >a {
-      color: $hightlight-text-color;
-    }
   }
 }
 
