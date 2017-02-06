@@ -20,11 +20,15 @@ header-img: "images/blog-bg.png"
         <li class="list-item">
           <div class="list-item-info">
               <img class="post-list-img" src="{{ site.baseurl }}/{{ post.post-list-img }}" />
+
+            <div class="post-list-text">
               <div class="post-list-title">{{ post.title }}
               </div>
               <div class="post-list-description">{{ post.description }} 
               </div>
               <div class="post-list-date">{{ post.date | date: "%Y/ %m/ %d" }}</div>
+            </div>
+
           </div>
         </li>
         </a>

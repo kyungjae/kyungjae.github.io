@@ -19,8 +19,10 @@
 .footer {
   width: 90%;
   max-width: 700px;
-  margin: 50px auto;
+  margin: 5% auto;
 }
+
+
 
 
 /* text style */
@@ -121,6 +123,10 @@ a.footnote {
 
 // header
 
+
+/*
+// 상단 이미지 있을때
+
 .header {
   background-image: url(../images/blog-bg.png);
   background-repeat: no-repeat;
@@ -167,8 +173,6 @@ a.footnote {
 .post-heading {
   visibility: hidden;
 }
-
-
 .post-header-title {
   font-size: 2.3em;
   font-weight: 700;
@@ -192,15 +196,15 @@ a.footnote {
   text-align: left;
   margin-top: 20px;
 }
+*/
 
-/*
+
 .header {
   height: 80px;
   padding: 0 5%;
   background-color: $grey-1;
   border-bottom: 1px solid $divider-color;
 }
-*/
 .header-item {
   max-width: 700px;
   margin-left: auto;
@@ -215,31 +219,17 @@ a.footnote {
 .blog-title {
   font-family: 'Merriweather', serif;
   padding-top: 26px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  color: #fff;
+  color: $text-color;;
   display: inline-block;
   text-rendering: optimizeLegibility;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   }
 .blog-title:hover {
   -webkit-transition: 0.2s ease-out all;
-  color: #fff;
+  color: $text-color;;
   }
 
-
-.atom-img {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  cusror: pointer;
-  margin: 0 10px;
-  background-image: url(/images/atom.png);
-  text-indent: -9999em;
-}
-.atom-img:hover {
-  background-image: url(/images/atom-hover.png);
-}
 
 /* menu list btn */
 .nav {
@@ -256,28 +246,25 @@ a.footnote {
   display: inline-block;
 
   a {
-    font-family: 'Merriweather', serif;
     font-weight: 700;
-    padding: 26px 20px 10px;
-    color: $grey-text-color;
+    padding: 26px 20px 28px;
     display: block;
     font-size: 14px;
     color: $grey-5;
     text-rendering: optimizeLegibility;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 
     &:active,
     &.selected {
-      -webkit-transition: 0.1s ease-out all;
+      -webkit-transition: 0.3s ease-out all;
       font-weight: 700;
-      color: #fff;
-      border-bottom: 2px solid #fff;
+      color: $text-color;
+      border-bottom: 2px solid $text-color;
     }
     &:focus,
     &:hover {
       -webkit-transition: 0.1s ease-out all;
-      border-bottom: 2px solid #fff;
-      color: #fff;
+      border-bottom: 2px solid $text-color;
+      color: $text-color;
     }
   }
 }
@@ -294,42 +281,38 @@ a.footnote {
   list-style: none;
 }
 
-.post-list .list-item-info {
-  margin: 0;
-  text-align: left;
-}
 .post-list li {
   box-shadow: 0 1px 5px rgba(0,0,0,0), 0 1px 1px rgba(0,0,0,0);
   transition: all 0.2s cubic-bezier(.25,.8,.25,1);
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   background-color: #fff;
   border-bottom: 1px solid $divider-color;
-}
-/*
-.post-list li:hover {
-  transition: all 0.2s cubic-bezier(.25,.8,.25,1);
-  box-shadow: 0 3px 3px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1);
-}
-*/
+  }
 
 .post-list li:hover .post-list-title {
   -webkit-transition: 0.3s ease-out all;
   color: $mainblue-d1;
 }
+/*
 .post-list li {
     &:focus,
     &:hover {
-      -webkit-transition: 0.2s ease-out all;
+      -webkit-transition: 0.1s ease-out all;
       border-bottom: 1px solid $mainblue-d1;
     }
 }
-
+*/
 .post-list-img {
   width: 100%;
   vertical-align: middle;
   border-radius: 4px;
-  margin-bottom: 20px;
 }
+.post-list-text {
+  text-align: left;
+  margin: 4%;
+  background-color: #fff;
+}
+
 .post-list-title {
   -webkit-transition: 0.3s ease-out all;
   font-size: 28px;
@@ -345,7 +328,7 @@ a.footnote {
 }
 .post-list-date {
   font-size: 14px;
-  margin-bottom: 40px;
+  margin-bottom: 5%;
   color: $grey-5;
 }
 
@@ -419,6 +402,17 @@ figcaption {
   margin-bottom: 20px;
 }
 
+.post-header-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #173057;
+  padding: 0 5%;
+  height: 500px;
+  background-size: 1400px auto;
+}
+
+
 .post {
   h1 {
     font-size: $blog-font-size-lg;
@@ -434,6 +428,7 @@ figcaption {
   margin: 10% 0 10% 0;
   text-align: left;
 }
+
 .post-title {
   font-size: 44px;
   font-weight: 700;

@@ -1,9 +1,9 @@
 ---
 layout: entry
 title: 키오스크형 터치 UI에서 더 나은 스크롤 방향은 무엇일까?
-description: 이거다 이거
-post-list-img: "images/hiring-imagex1.jpg"
-header-img: "images/blog-bg-1.jpg"
+description: 이번에 도도 포인트 새 버전을 개발하면서, 디자인 팀 내에서 콘텐츠의 스크롤 방향에 대한 이의 제기가 나왔습니다. 기존에는 별 생각 없이 세로 방향 스크롤을 사용하게끔 만들어져있었는데,
+post-list-img: "images/list-test-1.png"
+header-img: "images/list-test-1.png"
 publish: true
 ---
 

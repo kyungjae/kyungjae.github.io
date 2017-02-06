@@ -37,6 +37,31 @@
 </style>
 </head>
 <body>
+
+<!-- 해더 이미지 없이 -->
+    <div class="header">
+      <div class="header-item">
+        <div class="top-logo-wrap">
+          <a class="blog-title" href="{{ base_path }}/">H K J</a>
+        </div>
+        <div class="nav">
+          <ul class="menu">
+            <li><a class="
+              {% if page.url == '/about.html' %}
+              selected
+              {% endif %} menu-about" href="{{ base_path }}/about.html">About</a></li>
+            <li><a class="
+              {% if page.url != '/about.html' and page.url != '/jobs.html' %}
+              selected
+              {% endif %} menu-blog" href="{{ base_path }}/index.html">Blog</a></li>       
+        </div>      
+      </div> 
+    </div>
+
+
+
+<!-- 해더에 이미지 넣을때 -->
+<!-- 
     <div class="header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
       <div class="header-item">
         <div class="top-logo-wrap">
@@ -72,12 +97,7 @@
             <div class="post-header-date">{{ page.date | date: "%Y/ %m/ %d" }}
             </div>
 </div>
-
-        </div>        
-      </div>   
-    </div>
-      </div>
-    </div>
+-->
 <div class="content">
       {{ content }}
 </div>   
