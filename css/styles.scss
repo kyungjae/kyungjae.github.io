@@ -13,16 +13,12 @@
   font-family: "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial, "Malgun Gothic", Dotum, sans-serif;
 }
 
-
-
 .content,
 .footer {
   width: 90%;
   max-width: 700px;
   margin: 5% auto;
 }
-
-
 
 
 /* text style */
@@ -282,15 +278,12 @@ a.footnote {
 }
 
 .post-list li {
-  box-shadow: 0 1px 5px rgba(0,0,0,0), 0 1px 1px rgba(0,0,0,0);
-  transition: all 0.2s cubic-bezier(.25,.8,.25,1);
   margin-bottom: 50px;
   background-color: #fff;
   border-bottom: 1px solid $divider-color;
   }
 
 .post-list li:hover .post-list-title {
-  -webkit-transition: 0.3s ease-out all;
   color: $mainblue-d1;
 }
 /*
@@ -305,7 +298,6 @@ a.footnote {
 .post-list-img {
   width: 100%;
   vertical-align: middle;
-  border-radius: 4px;
 }
 .post-list-text {
   text-align: left;
@@ -642,9 +634,6 @@ figcaption {
   }
   .back-btn a {
     padding: 20px 25%;
-  }
-  .spoqa-logo-wrap {
-      float:none;
   }
   .pagination .previous {
     float: left;
